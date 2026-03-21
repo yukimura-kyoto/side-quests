@@ -1,6 +1,8 @@
+package sidequests;
+
 import java.util.Scanner;
 
-public class verificadorCPF {
+public class verificadorCPFv1 {
     static void main() {
 
             // Partes pesquisadas: foi como o calculo do CPF era feito, alguma maneira de separar os número,
