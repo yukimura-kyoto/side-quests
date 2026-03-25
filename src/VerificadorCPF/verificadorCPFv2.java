@@ -1,4 +1,4 @@
-package sidequests;
+package VerificadorCPF;
 import java.util.Scanner;
 
 public class verificadorCPFv2 {
