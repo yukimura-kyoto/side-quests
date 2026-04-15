@@ -60,6 +60,7 @@ public class CaixaEletronico {
                     IO.println("Você não tem dinheiro suficiente para Sacar");
                 }else{
                     saldoAtual = saldoAtual-saque;
+                    QuantidadeNotasSacadas();
                 }
                 break;
 
@@ -72,5 +73,43 @@ public class CaixaEletronico {
     // Cara, isso literalmente pula uma linha
     public static void PularLinha(){
         IO.print("\n");
+    }
+
+    public static void QuantidadeNotasSacadas(){
+        int n100=0,n50=0,n20=0,n10=0,n5=0,n2=0,n1=0;
+
+        while (saque>0){
+            if (saque>=100){
+                saque-=100;
+                n100++;
+            }else if (saque>=50){
+                saque-=50;
+                n50++;
+            }else if (saque>=20){
+                saque-=20;
+                n20++;
+            }else if (saque>=10){
+                saque-=10;
+                n10++;
+            }else if (saque>=5){
+                saque-=5;
+                n5++;
+            }else if (saque>=2){
+                saque-=2;
+                n2++;
+            }else if (saque>=1){
+                saque-=1;
+                n1++;
+            }
+        }
+
+        System.out.println("Quantidade de Notas\n"+
+                "Notas de R$100: "+n100+"\n"+
+                "Notas de R$50: "+n50+"\n"+
+                "Notas de R$20: "+n20+"\n"+
+                "Notas de R$10: "+n10+"\n"+
+                "Notas de R$5: "+n5+"\n"+
+                "Notas de R$2: "+n2+"\n"+
+                "Moeda de R$1: "+n1);
     }
 }
